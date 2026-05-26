@@ -893,6 +893,4 @@ function gameloop() {
 }
 
 // Call Function
-window.onload() => {
-    gameloop();
-}
+gameloop();
