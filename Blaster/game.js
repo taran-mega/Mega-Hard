@@ -19,6 +19,8 @@ async function saveScore(name, score) {
   }
 }
 
+saveScore("Taran", 999);
+
 // Get Data From Html
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
