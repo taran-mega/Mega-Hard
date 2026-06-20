@@ -8,3 +8,6 @@ https://taran-mega.github.io/Mega-Hard/
 - Browser based Games
 - No download required for playing Games
 - Free games
+
+# Note
+If you find our website not working, it may because some technical issue, please recheck after 5-10 minutes.
