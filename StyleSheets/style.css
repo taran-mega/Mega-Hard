@@ -5,21 +5,54 @@
 body{
     background: #0D1117;
     color: white;
+    
     max-width: 1000px;
+    
+    margin: 0px;
 }
 
-h1{
-    background: linear-gradient(90deg, #4F46E5, #06B6D4);
-    text-align: center;
-    border-radius: 25px;
-    min-height: 5vh;
-    font-size: 40px;
-    font-weight: 700;
-    padding: 20px;
+
+/* hfd*/
+header{
+    background: linear-gradient(45deg, #9a40ff, #80d6ff);
+    
+    border-radius: 15px;
+    
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-h1 .note{
-    font-size: 15px;
+header .left-content{
+}
+
+header .left-content img{
+    width: 100px;
+    height: 100px;
+}
+
+header .right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .right-content .name{
+    font-size: 50px;
+    font-weight: 800;
+    
+    filter: drop-shadow(1px, 5px, 100px, rgba(255, 255, 255, 1));
+}
+
+header .right-content .slogan{
+    font-size: 25px;
+    font-weight: 600;
+    
+    filter: drop-shadow(0px, 0px, 8px, #2b2eff);
 }
 
 .description{
@@ -53,7 +86,6 @@ h1 .note{
     padding: 10px 20px 10px 35px;
     border: 5px solid #303c53;
     border-radius: 25px;
-    font-size: 40px;
     font-weight: 500;
     min-height: 25vh;
     overflow: hidden;
@@ -87,7 +119,7 @@ h1 .note{
     width: 200px;
     height: 50px;
     color: white;
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 500;
     overflow: hidden;
 }
@@ -99,7 +131,7 @@ h1 .note{
 
 .game-list .apps-card .upper-content .left-section .heading{
     font-weight: 500;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .game-list .apps-card .lower-content .note{
