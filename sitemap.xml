@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+
+  <!-- Main Website -->
   <url>
     <loc>https://taran-mega.github.io/Mega-Hard/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
-  
+
+  <!-- LinkedIn Profile -->
   <url>
-  	<loc>https://taran-mega.github.io/Mega-Hard/Blaster/game.html</loc>
+    <loc>https://www.linkedin.com/in/taran-megahard</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- YouTube Channel -->
+  <url>
+    <loc>https://www.youtube.com/@MegaHard-web</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- itch.io Profile -->
+  <url>
+    <loc>https://taran-megahard.itch.io</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
