@@ -1,0 +1,102 @@
+#container{
+    width: 100%;
+    min-height: 100%;
+}
+
+#top-bar{
+    width: 100%;
+    min-height: 50px;
+    
+    background: #101627;
+    border-bottom: 5px solid #353f6a;
+    padding: 10px;
+}
+
+#top-bar h2{
+    font-size: 16px;
+    color: #408cff;
+}
+
+#top-bar h3{
+    font-size: 25px;
+}
+
+#showcase{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 200px), 1fr)
+    );
+    gap: 20px;
+    align-content: start;
+    
+    margin-top: 20px;
+}
+
+#showcase .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    width: 100%;
+    min-height: 200px;
+    
+    border: 5px solid #132a4c;
+    border-radius: 25px;
+    
+    padding: 5px;
+    padding-bottom: 10px;
+    background: #0d1c33;
+}
+
+#showcase .item img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    
+    border-radius: 25px;
+    background: #18345f;
+    margin-bottom: 5px;
+}
+
+#showcase .item #type{
+    font-size: 15px;
+    color: #408cff;
+    margin-bottom: 10px;
+}
+
+#showcase .item #name{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#showcase .item #des{
+    font-size: 13px;
+    color: #b2b2b2;
+}
+
+#showcase .item #btns-div{
+    width: 100%;
+    display: flex;
+}
+
+#showcase .item #btns-div button{
+    flex: 1;
+    
+    border: none;
+    border-radius: 10px;
+    
+    background: #47548e;
+    padding: 5px 10px;
+    transition: transform 0.3s ease;
+    margin: 5px;
+}
+
+#showcase .item #btns-div button:hover{
+    transform: scale(.9);
+}

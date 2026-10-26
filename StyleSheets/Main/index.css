@@ -1,0 +1,91 @@
+:root{
+    --top-panel-height: clamp(30px, 5vh, 50px);
+}
+
+body{
+    display: flex;
+}
+
+#panel{
+    position: fixed;
+    
+    height: var(--top-panel-height);
+    width: 100%;
+    
+    background: black;
+    
+    border-bottom: 1px solid white;
+    
+    font-family: Tahoma, arial, serif;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    z-index: 1000;
+}
+
+#panel #intro{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    
+    height: 100%;
+    border-right: .5px solid white;
+    padding: 10px;
+}
+
+#panel #intro #logo{
+    width: 35px;
+    height: auto;
+}
+
+#panel #intro #name{
+    font-size: 20px;
+    font-family: serif, arial, Tahoma;
+    
+    color: white;
+}
+
+#panel #tabs{
+    flex: 1;
+    height: 100%;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    
+    color: white;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#panel #tabs .tab{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    
+    background: transparent;
+    color: white;
+    
+    height: 100%;
+    padding: 0 5px;
+    border: none;
+    transition: transform .7s ease;
+}
+
+#panel #tabs .tab.active{
+    color: #2b2eff;
+    filter: drop-shadow(5px, 5px, 5px, rgba(255, 255, 255, 1));
+    transform: scale(1.2);
+}
+
+#page{
+    margin-top: var(--top-panel-height);
+    flex: 1;
+    border: none;
+}

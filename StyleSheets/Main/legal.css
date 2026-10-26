@@ -1,0 +1,723 @@
+/* ========================================
+   MEGA HARD — SHARED LEGAL STYLESHEET
+   Pages: Terms, Privacy Policy, About
+======================================== */
+
+
+/* ========================================
+   1. ROOT VARIABLES
+======================================== */
+
+:root {
+    --page-bg: #050912;
+    --panel-bg: #0A1220;
+    --panel-hover: #0D192B;
+
+    --accent: #00BFFF;
+    --accent-soft: rgba(0, 191, 255, 0.12);
+    --accent-border: rgba(0, 191, 255, 0.28);
+    --accent-glow: rgba(0, 191, 255, 0.12);
+
+    --text-primary: #EAF2F8;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+
+    --border-color: #1E293B;
+
+    --header-height: 72px;
+    --content-width: 850px;
+
+    --radius-small: 8px;
+    --radius-medium: 14px;
+    --radius-large: 20px;
+
+    --transition-fast: 0.2s ease;
+}
+
+
+/* ========================================
+   2. RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 20px);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background: var(--page-bg);
+    color: var(--text-primary);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
+
+
+/* ========================================
+   3. HEADER
+======================================== */
+
+.site-header {
+    min-height: var(--header-height);
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 12px 6%;
+
+    background: rgba(5, 9, 18, 0.96);
+    border-bottom: 1px solid var(--border-color);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+/* Brand */
+
+.site-logo {
+    color: var(--text-primary);
+
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+
+    white-space: nowrap;
+
+    transition: color var(--transition-fast);
+}
+
+.site-logo:hover {
+    color: var(--accent);
+}
+
+
+/* Main Navigation */
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 26px;
+}
+
+.site-nav a {
+    position: relative;
+
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    font-weight: 500;
+
+    transition: color var(--transition-fast);
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    color: var(--accent);
+}
+
+
+/* Navigation underline */
+
+.site-nav a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--accent);
+    transition: width var(--transition-fast);
+}
+
+.site-nav a:hover::after,
+.site-nav a[aria-current="page"]::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   4. MAIN LAYOUT
+======================================== */
+
+.legal-main {
+    width: min(
+        var(--content-width),
+        88%
+    );
+
+    margin: 0 auto;
+    padding: 68px 0 90px;
+
+    flex: 1;
+}
+
+
+/* ========================================
+   5. PAGE INTRODUCTION
+======================================== */
+
+.page-intro {
+    position: relative;
+
+    margin-bottom: 42px;
+    padding: 34px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 191, 255, 0.075),
+            transparent 65%
+        );
+
+    border: 1px solid var(--accent-border);
+    border-radius: var(--radius-large);
+
+    box-shadow:
+        0 0 28px var(--accent-glow);
+}
+
+
+/* Small label above the title */
+
+.page-label {
+    margin-bottom: 12px;
+
+    color: var(--accent);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+
+/* Main heading */
+
+.page-intro h1 {
+    margin-bottom: 14px;
+
+    color: var(--text-primary);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+
+/* Introductory description */
+
+.page-description {
+    max-width: 650px;
+
+    color: var(--text-secondary);
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
+
+
+/* Revision date */
+
+.last-updated {
+    margin-top: 24px;
+    padding-top: 16px;
+
+    border-top: 1px solid var(--border-color);
+
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+
+/* ========================================
+   6. CONTENT CONTAINER
+======================================== */
+
+.legal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+
+/* Individual sections */
+
+.legal-section {
+    padding: 28px 30px;
+
+    background: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-medium);
+
+    scroll-margin-top: calc(var(--header-height) + 20px);
+
+    transition:
+        border-color var(--transition-fast),
+        background var(--transition-fast);
+}
+
+
+/* Subtle hover effect on larger screens */
+
+@media (hover: hover) and (pointer: fine) {
+    .legal-section:hover {
+        border-color: var(--accent-border);
+        background: var(--panel-hover);
+    }
+}
+
+
+/* ========================================
+   7. HEADINGS
+======================================== */
+
+.legal-section h2 {
+    position: relative;
+
+    margin-bottom: 18px;
+    padding-left: 16px;
+
+    color: var(--text-primary);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+
+/* Cyan marker beside section headings */
+
+.legal-section h2::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    bottom: 0.2em;
+
+    width: 3px;
+
+    background: var(--accent);
+    border-radius: 4px;
+
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+
+/* Subheadings */
+
+.legal-section h3 {
+    margin-top: 26px;
+    margin-bottom: 10px;
+
+    color: var(--accent);
+    font-size: 1.03rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   8. PARAGRAPHS
+======================================== */
+
+.legal-section p {
+    margin-bottom: 16px;
+
+    color: var(--text-secondary);
+    font-size: 0.96rem;
+    line-height: 1.9;
+}
+
+.legal-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Emphasized text */
+
+.legal-section strong {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+
+/* ========================================
+   9. LISTS
+======================================== */
+
+.legal-section ul,
+.legal-section ol {
+    margin: 14px 0 18px;
+    padding-left: 24px;
+
+    color: var(--text-secondary);
+}
+
+.legal-section li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.legal-section li:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section li::marker {
+    color: var(--accent);
+}
+
+
+/* ========================================
+   10. INLINE LINKS
+======================================== */
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 9px 0;
+
+    color: var(--accent);
+    font-size: 0.94rem;
+    font-weight: 700;
+
+    border-bottom: 1px solid var(--accent-border);
+
+    transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.text-link:hover {
+    color: var(--text-primary);
+    border-color: var(--accent);
+}
+
+
+/* Keyboard accessibility */
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+
+/* ========================================
+   11. FOOTER
+======================================== */
+
+.site-footer {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    padding: 28px 6%;
+
+    background: #070D18;
+    border-top: 1px solid var(--border-color);
+
+    text-align: center;
+}
+
+
+/* Copyright */
+
+.footer-copyright {
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    line-height: 1.7;
+}
+
+
+/* Footer Navigation */
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+}
+
+.footer-nav a {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+
+    transition: color var(--transition-fast);
+}
+
+.footer-nav a:hover,
+.footer-nav a[aria-current="page"] {
+    color: var(--accent);
+}
+
+
+/* ========================================
+   12. ABOUT PAGE VARIATION
+======================================== */
+
+/* The About page doesn't need a revision date */
+
+.about-page .page-intro {
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+
+/* Highlight the vision section */
+
+.about-page #our-vision {
+    border-color: var(--accent-border);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 191, 255, 0.07),
+            var(--panel-bg) 70%
+        );
+}
+
+
+/* ========================================
+   13. RESPONSIVE DESIGN
+======================================== */
+
+
+/* Tablets and smaller screens */
+
+@media (max-width: 768px) {
+
+    :root {
+        --header-height: 64px;
+        --content-width: 100%;
+    }
+
+    .site-header {
+        padding: 12px 5%;
+        gap: 16px;
+    }
+
+    .site-logo {
+        font-size: 1.15rem;
+    }
+
+    .site-nav {
+        gap: 16px;
+    }
+
+    .site-nav a {
+        font-size: 0.86rem;
+    }
+
+    .legal-main {
+        width: 90%;
+        padding: 48px 0 64px;
+    }
+
+    .page-intro {
+        margin-bottom: 28px;
+        padding: 28px 24px;
+    }
+
+    .page-intro h1 {
+        letter-spacing: -0.7px;
+    }
+
+    .legal-content {
+        gap: 14px;
+    }
+
+    .legal-section {
+        padding: 24px;
+    }
+
+    .legal-section h2 {
+        font-size: 1.22rem;
+    }
+
+    .site-footer {
+        padding: 24px 5%;
+    }
+}
+
+
+/* Mobile phones */
+
+@media (max-width: 480px) {
+
+    :root {
+        --header-height: 60px;
+    }
+
+    body {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .site-header {
+        padding: 12px 4%;
+        gap: 12px;
+    }
+
+    .site-logo {
+        font-size: 1rem;
+        letter-spacing: -0.3px;
+    }
+
+    .site-nav {
+        gap: 12px;
+    }
+
+    .site-nav a {
+        font-size: 0.78rem;
+    }
+
+    .legal-main {
+        width: 92%;
+        padding: 34px 0 48px;
+    }
+
+    .page-intro {
+        margin-bottom: 22px;
+        padding: 24px 20px;
+
+        border-radius: var(--radius-medium);
+    }
+
+    .page-label {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .page-intro h1 {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+        line-height: 1.2;
+    }
+
+    .page-description {
+        font-size: 0.92rem;
+        line-height: 1.75;
+    }
+
+    .last-updated {
+        margin-top: 18px;
+        padding-top: 12px;
+        font-size: 0.76rem;
+    }
+
+    .legal-content {
+        gap: 12px;
+    }
+
+    .legal-section {
+        padding: 21px 18px;
+        border-radius: var(--radius-small);
+    }
+
+    .legal-section h2 {
+        margin-bottom: 14px;
+        padding-left: 13px;
+        font-size: 1.12rem;
+    }
+
+    .legal-section h3 {
+        margin-top: 22px;
+        font-size: 0.98rem;
+    }
+
+    .legal-section p,
+    .legal-section li {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .legal-section ul,
+    .legal-section ol {
+        padding-left: 21px;
+    }
+
+    .text-link {
+        font-size: 0.9rem;
+    }
+
+    .site-footer {
+        gap: 14px;
+        padding: 22px 4%;
+    }
+
+    .footer-copyright {
+        font-size: 0.77rem;
+    }
+
+    .footer-nav {
+        gap: 12px 18px;
+    }
+
+    .footer-nav a {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* ========================================
+   14. REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
