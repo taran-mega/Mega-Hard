@@ -54,7 +54,7 @@ function addFooter(){
 // Function for Calling all Initial Functions
 function init(){
     
-    addFooter();
+   addFooter();
 }
 
 // Call Initial Function
