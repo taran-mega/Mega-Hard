@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" fill="none">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="320" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#153B68"/>
+      <stop offset="1" stop-color="#091426"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="160" y1="205" x2="160" y2="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#527FAF"/>
+      <stop offset="1" stop-color="#24466F"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="80" y1="80" x2="250" y2="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#42D5FF"/>
+      <stop offset="1" stop-color="#1677FF"/>
+    </linearGradient>
+    <clipPath id="frame">
+      <rect width="320" height="320" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <!-- Background -->
+    <rect width="320" height="320" fill="url(#background)"/>
+
+    <!-- Subtle technical grid -->
+    <g stroke="#4676A8" stroke-width=".7" opacity=".16">
+      <path d="M0 40H320 M0 80H320 M0 120H320 M0 160H320 M0 200H320 M0 240H320 M0 280H320"/>
+      <path d="M40 0V320 M80 0V320 M120 0V320 M160 0V320 M200 0V320 M240 0V320 M280 0V320"/>
+    </g>
+
+    <!-- Concentric rings -->
+    <circle cx="160" cy="151" r="119" stroke="#287BC0" stroke-width="1" opacity=".35"/>
+    <circle cx="160" cy="151" r="99" stroke="#42C9FF" stroke-width="1" opacity=".24"/>
+    <circle cx="160" cy="151" r="79" stroke="#42C9FF" stroke-width="1" opacity=".18"/>
+
+    <!-- Connected data points -->
+    <g stroke="url(#glow)" stroke-width="1.5" opacity=".8">
+      <path d="M42 218L80 179L105 194"/>
+      <path d="M238 190L267 155L291 176"/>
+      <path d="M65 80L89 98"/>
+    </g>
+    <g fill="#49CFFF">
+      <circle cx="42" cy="218" r="3"/>
+      <circle cx="80" cy="179" r="3"/>
+      <circle cx="105" cy="194" r="3"/>
+      <circle cx="267" cy="155" r="3"/>
+      <circle cx="291" cy="176" r="3"/>
+      <circle cx="65" cy="80" r="2.5"/>
+    </g>
+
+    <!-- Shoulders and torso -->
+    <path d="M76 320V272C76 229 109 204 139 198H181C211 204 244 229 244 272V320H76Z"
+          fill="url(#shirt)"/>
+
+    <!-- Neck -->
+    <path d="M140 181V215C147 229 173 229 180 215V181H140Z"
+          fill="#A9C4DF"/>
+
+    <!-- Ears -->
+    <path d="M119 126C108 118 104 133 114 147L124 151Z" fill="#A9C4DF"/>
+    <path d="M201 126C212 118 216 133 206 147L196 151Z" fill="#A9C4DF"/>
+
+    <!-- Face -->
+    <path d="M119 104C119 75 137 59 160 59C183 59 201 75 201 104V143C201 170 181 190 160 190C139 190 119 170 119 143V104Z"
+          fill="#BBD0E5"/>
+
+    <!-- Hair -->
+    <path d="M117 117C112 94 115 71 132 56C145 44 169 43 187 55C205 67 210 88 203 119L194 103L187 81C170 91 147 94 130 88L126 111L117 117Z"
+          fill="#102039"/>
+
+    <!-- Hair highlight -->
+    <path d="M127 75C139 56 161 52 178 59" stroke="#294A70" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Face details -->
+    <g stroke="#47698E" stroke-width="2" stroke-linecap="round">
+      <path d="M135 122L148 122"/>
+      <path d="M172 122L185 122"/>
+      <path d="M160 125L156 145L163 146"/>
+      <path d="M146 162C154 167 166 167 174 162"/>
+    </g>
+
+    <!-- Collar -->
+    <path d="M139 205L160 225L181 205L193 218L175 244H145L127 218Z"
+          fill="#19395E"/>
+    <path d="M139 205L160 225L148 241L127 218Z" fill="#6F9BC8"/>
+    <path d="M181 205L160 225L172 241L193 218Z" fill="#416D9E"/>
+
+    <!-- Bottom edge accent -->
+    <path d="M0 309H320" stroke="#37BFFF" stroke-width="2" opacity=".8"/>
+    <path d="M0 314H100" stroke="#37BFFF" stroke-width="1" opacity=".3"/>
+  </g>
+
+  <!-- Frame outline -->
+  <rect x=".75" y=".75" width="318.5" height="318.5" rx="17.25"
+        stroke="#2C5D8E" stroke-width="1.5"/>
+</svg>
