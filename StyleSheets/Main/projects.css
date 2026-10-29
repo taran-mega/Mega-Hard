@@ -7,7 +7,7 @@
     width: 100%;
     min-height: 50px;
     
-    background: #101627;
+    background: #0c0e2e;
     border-bottom: 5px solid #353f6a;
     padding: 10px;
 }
@@ -19,6 +19,27 @@
 
 #top-bar h3{
     font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#top-bar #filter-btns{
+    width: 100%;
+}
+
+#top-bar #filter-btns button{
+    border: 2px solid #4994dc;
+    border-radius: 10px;
+    
+    padding: 5px 10px;
+    margin: 0 10px;
+    margin-left: 0;
+    
+    background: transparent;
+    transition: background .4s ease;
+}
+
+#top-bar #filter-btns button.active{
+    background: #4994dc;
 }
 
 #showcase{
@@ -91,12 +112,12 @@
     border: none;
     border-radius: 10px;
     
-    background: #47548e;
+    background: #4994dc;
     padding: 5px 10px;
     transition: transform 0.3s ease;
     margin: 5px;
 }
 
-#showcase .item #btns-div button:hover{
+#showcase .item #btns-div button:active{
     transform: scale(.9);
 }

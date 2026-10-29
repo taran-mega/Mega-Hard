@@ -1,5 +1,6 @@
 :root{
     --top-panel-height: clamp(30px, 5vh, 50px);
+    --top-panel-padding: 15px;
 }
 
 body{
@@ -7,16 +8,8 @@ body{
 }
 
 #panel{
-    position: fixed;
-    
-    height: var(--top-panel-height);
+    height: calc(var(--top-panel-height) + 2 * var(--top-panel-padding));
     width: 100%;
-    
-    background: black;
-    
-    border-bottom: 1px solid white;
-    
-    font-family: Tahoma, arial, serif;
     
     display: flex;
     flex-direction: row;
@@ -24,6 +17,10 @@ body{
     align-items: center;
     
     z-index: 1000;
+    background: #0c0e2e;
+    border-bottom: 1px solid #7c7c7c;
+    font-family: Tahoma, arial, serif;
+    position: fixed;
 }
 
 #panel #intro{
@@ -33,7 +30,6 @@ body{
     gap: 10px;
     
     height: 100%;
-    border-right: .5px solid white;
     padding: 10px;
 }
 
@@ -75,17 +71,16 @@ body{
     height: 100%;
     padding: 0 5px;
     border: none;
-    transition: transform .7s ease;
+    transition: transform .7s ease, color .7s ease;
 }
 
 #panel #tabs .tab.active{
-    color: #2b2eff;
-    filter: drop-shadow(5px, 5px, 5px, rgba(255, 255, 255, 1));
+    color: #408cff; /*#2b2eff;*/
     transform: scale(1.2);
 }
 
 #page{
-    margin-top: var(--top-panel-height);
+    margin-top: calc(var(--top-panel-height) + 2 * var(--top-panel-padding));
     flex: 1;
     border: none;
 }
