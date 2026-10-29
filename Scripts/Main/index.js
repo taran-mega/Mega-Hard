@@ -14,6 +14,10 @@ function addTabs(){
         {
             name: "Projects",
             src: "projects.html"
+//        },
+//        {
+//            name: "Our team",
+//            src: "team.html"
         }
     ];
     

@@ -4,6 +4,9 @@ function updateShowcase(filter = null){
     // Get Data From HTML
     const showcase = document.getElementById("showcase");
     
+    // Reset Showcase
+    showcase.innerHTML = "";
+    
     // Item to add in Showcase
     const items = [
         {
@@ -34,6 +37,9 @@ function updateShowcase(filter = null){
     
     // Iter Every Item
     items.forEach(item => {
+        
+        // Check Item Types
+        if (item.type !== filter && filter !== null) return;
         
         // Make Divs
         const mainDiv = document.createElement("div");
@@ -85,6 +91,55 @@ function updateShowcase(filter = null){
     });
 }
 
+// Function for applying filter on projects
+function applyFilter(){
+    
+    // Get Data from HTML
+    const filterBtns = document.getElementById("filter-btns");
+    
+    // Make Divs
+    const allBtn = document.createElement("button");
+    const gameBtn = document.createElement("button");
+    
+    // Modify Content
+    allBtn.textContent = "All projects";
+    gameBtn.textContent = "Games";
+    
+    // Modify Classes & IDs
+    allBtn.className = "active";
+    
+    // Add Event Listener
+    allBtn.addEventListener("click", () => {
+        updateShowcase();
+    });
+    gameBtn.addEventListener("click", () => {
+        updateShowcase("video game");
+    });
+    
+    // Append Childs
+    filterBtns.appendChild(allBtn);
+    filterBtns.appendChild(gameBtn);
+    
+    // Get Data again from HTML (:2)
+    const btns = document.querySelectorAll("#filter-btns button");
+    
+    // Iter all Filter Buttons
+    btns.forEach(btn => {
+        
+        // Add Event Listener
+        btn.addEventListener("click", () => {
+            
+            // Remove 'active' from every button
+            btns.forEach(item => {
+                item.classList.remove("active");
+            });
+            
+            // Add 'remove' on which button is clicked
+            btn.classList.add("active");
+        });
+    });
+}
+
 // Function to Sent Messages to Parent
 function sendToParent(){
     
@@ -100,6 +155,7 @@ function init(){
     
     sendToParent();
     updateShowcase();
+    applyFilter();
 }
 
 // Call Initial Functions

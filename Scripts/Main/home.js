@@ -31,7 +31,7 @@ function addFeatured(){
         rightSide.id = "right-side";
         
         // Make Name
-        const title = document.createElement("h2");
+        const title = document.createElement("h3");
         title.textContent = item.name;
         
         // Make Img
