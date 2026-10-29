@@ -323,7 +323,7 @@ svg {
 
 /* Cyan marker beside section headings */
 
-.legal-section h2::before {
+.legal-section h2::before{
     content: "";
 
     position: absolute;

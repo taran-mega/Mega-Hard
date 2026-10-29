@@ -1,0 +1,86 @@
+#container{
+    width: 100%;
+    min-height: 100%;
+}
+
+#hero{
+    padding: 10px;
+}
+
+#hero div{
+    margin-bottom: 10px;
+}
+
+#hero #line-1{
+    font-size: 10px;
+    color: #55acff;
+}
+
+#hero #line-2{
+    font-size: 30px;
+    color: white;
+    margin-bottom: -10px;
+}
+
+#hero #line-3{
+    font-size: 30px;
+    color: #55acff;
+}
+
+#profiles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+}
+
+#profiles .main{
+    border: 3px solid #151a54;
+    border-radius: 20px;
+    
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+#profiles .main #left-div{
+    flex: 0 0 40%;
+}
+
+#profiles .main #left-div #avatar{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+#profiles .main #right-div{
+    display: flex;
+    flex-direction: column;
+    
+    flex: 1;
+    padding: 5px;
+}
+
+#profiles .main #right-div #name{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+#profiles .main #right-div #rank{
+    font-size: 10px;
+    color: #55acff;
+}
+
+#profiles .main #right-div #contacts{
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+#profiles .main #right-div #contacts .contact{
+    font-size: 14px;
+    margin-bottom: 2px;
+}
